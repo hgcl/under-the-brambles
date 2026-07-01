@@ -1,0 +1,16 @@
+---
+layout: default
+title: Posts
+description: All posts from Under the Brambles.
+permalink: /posts/
+---
+
+<h2>All Posts</h2>
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <span>{{ post.date | date: "%B %-d, %Y" }}</span>
+    </li>
+  {% endfor %}
+</ul>
