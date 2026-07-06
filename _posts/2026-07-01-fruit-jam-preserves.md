@@ -8,6 +8,7 @@ prepTime: {min: 20}
 cookTime: {min: 15}
 totalTime: {hour: 10}
 yield: {value: 10, unit: jars}
+excerpt: "However, Boermans says the earliest known recipe for jam is in the 'De Re Coquinaria' (The Art of Cooking) by Apicius, which was written in the 4th Century C.E. at the height of the Roman Empire. It features quince mashed in honey, which is quite unlike the jam we buy today."
 ingredients:
   - {name: fruit, value: 5, unit: kg}
   - {name: sugar, value: 2.5, unit: kg}
@@ -37,6 +38,14 @@ faq:
     answer: The jars can be kept in a cool room for up to a few years. Ideally, eat them within a year and make another batch the following year!
   - question: What is this white mold?
     answer: If opened and not eaten fast enough, some jars might develop a few spots of white mold. Many people scrape that mold off, and safely eat what is underneath. If the mold is brightly colored or if you have a weak immune system, it might be better to discard the jar.
+sources:
+  - {name: "The short, sweet, and sticky history of jam (National Geographic)", url: https://www.nationalgeographic.com/history/article/history-of-jam-meghan-markle-lifestyle/}
 ---
 
-TODO add some content here.
+However, Boermans says the earliest known recipe for jam is in the 'De Re Coquinaria' (The Art of Cooking) by Apicius, which was written in the 4th Century C.E. at the height of the Roman Empire. It features quince mashed in honey, which is quite unlike the jam we buy today.  
+
+Honey was widely used to preserve food—and particularly fruit—globally, food writer Sarah B. Hood points out in her book, Jam, Jelly and Marmalade: A Global History. Honey was cheap, easy to find, and had some natural antibacterial properties. 
+
+But sugar makes better jam. Sugarcane is native to Southeast Asia and it wasn’t until sugarcane was introduced to Persia at some point between the 3rd and 6th Century C.E. that jam as we know it today was made for the first time. 
+
+TODO: create my own text, this one is used as a placeholder

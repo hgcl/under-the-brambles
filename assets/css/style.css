@@ -7,8 +7,10 @@
   --color-bg-strong: #3c4a3f;
 
   /* SPACES */
-  --space-m: 16px;
-  --space-l: 32px;
+  --space-m: 18px;
+  --space-l: 36px;
+  --space-xl: 54px;
+
 
   /* FONTS */
   --font-body: "Noticia Text", serif;
@@ -26,8 +28,18 @@ html {
 a {
   color: inherit;
 }
+a[href]:not(:where(
+  /* exclude hash only links */
+  [href^="#"],
+  /* exclude javascript only links */
+  [href^="javascript:" i],  
+  /* exclude relative but not double slash only links */
+  [href^="/"]:not([href^="//"])
+)):after {
+  content: ' ↗';
+}
 
-h1 {
+h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-weight: 600;
 }
@@ -38,8 +50,8 @@ summary {
 
 /* GENERAL LAYOUT */
 
-.site-header {
-  padding: 2rem;
+body {
+  margin: var(--space-l);
 }
 
 .site-branding {
@@ -47,24 +59,40 @@ summary {
   align-items: center;
   gap: 1.5rem;
 
-
   h1 a {
     text-decoration: none;
   }
+
+  #breadcrumbs {
+    margin-block: var(--space-m); 
+  }
 }
 
-.site-title {
-  font-size: 0.8rem;
-  line-height: 1;
-}
-
-
-#breadcrumbs {
- margin-block: var(--space-m); 
+.site-content {
+  margin-top: var(--space-xl);
 }
 
 .site-footer {
   color: var(--color-fg-mute);
   text-align: center;
-  padding: 1.5rem;
+  margin-top: var(--space-xl);
+}
+
+/* UTILS */
+
+.visually-hidden {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.typography {
+  p:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 }

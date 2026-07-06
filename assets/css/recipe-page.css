@@ -1,5 +1,49 @@
-main {
-    max-width: 720px;
-    margin: 0 auto;
+.post-header {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: var(--space-l);
+}
+
+.post-image {
+  max-width: 300px;
+  height: fit-content;
+}
+.post-intro {
+  max-width: 720px;
+
+  .post-date {
+    display: block;
+  }
+  & p {
+    font-size: 1.3rem;
+  }
+}
+
+.post-content {
+  margin-top: var(--space-xl);
+  display: flex;
+  gap: var(--space-l);
+
+  .post-story {
+    flex: 1 0 500px;
+    align-self: flex-start;
+    position: sticky;
+    top: var(--space-l);
+
+    border: dashed 2px;
     padding: var(--space-m);
+  }
+
+  .post-sources {
+  margin-top: 2rem;
+  color: var(--color-fg-mute);
+
+    h3 {
+      font-size: 1rem;
+    }
+    a {
+      font-style: italic;
+    }
+}
 }

@@ -1,0 +1,84 @@
+---
+layout: wrapper
+page_type: /assets/css/recipe-page.css
+---
+
+<!-- 
+  Adding recipe metadata docs: 
+    - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/itemscope#html 
+    - https://schema.org/Recipe
+-->
+
+<article itemscope itemtype="https://schema.org/Recipe">
+
+  <header class="post-header">
+    <img itemprop="image" src="{{ page.image }}" class="post-image"/>
+    <div class="post-intro">
+      <h1 itemprop="name">{{ page.title }}</h1>
+      <time class="post-date" datetime="{{ page.date }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <p itemprop="description">{{ page.excerpt }}</p>
+      <a href="#recipe">Go to recipe <span aria-hidden>↓</span></a>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="typography post-story">
+      <h2 class="visually-hidden">Background</h2>
+      {{content}}
+      <div class="post-sources">
+        <h3>Sources</h3>
+        {%- for source in page.sources -%}
+        <a href="{{ source.url }}">{{ source.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div>
+      <h2 id="recipe" class="visually-hidden">Recipe</h2>
+
+      <!-- ingredients -->
+      <div>
+        <h3>Ingredients</h3>
+        <ul>
+            {%- for ingredient in page.ingredients -%}
+            <li itemprop="recipeIngredient" itemscope itemtype="https://schema.org/PropertyValue"><span itemprop="value">{{ ingredient["value"] }}</span>{% if ingredient["unit"] %} {{ ingredient["unit"] }}{% endif %} <span itemprop="name">{{ ingredient["name"] }}</span>{% if ingredient["optional"] %} (optional){% endif %}</li>
+            {%- endfor -%}
+        </ul>
+      </div>
+
+      <!-- metadata --> 
+      {% if page.prepTime or page.cookTime or page.yield %}
+      <h3 class="visually-hidden">Other info</h3>
+        <ul>
+          {% if page.yield %}<li>Yield: <span itemprop="recipeYield">{{ page.yield.value }} {{ page.yield.unit }}</span></li>{% endif %}
+          {% if page.prepTime %}<li>Preparation time: {% include duration.html itemProp="prepTime" hour=page.prepTime.hour min=page.prepTime.min %}</li>{% endif %}
+          {% if page.cookTime %}<li>Cooking time: {% include duration.html itemProp="cookTime"  hour=page.cookTime.hour min=page.cookTime.min %}</li>{% endif %}
+          {% if page.totalTime %}<li>Total time: {% include duration.html   hour=page.totalTime.hour min=page.totalTime.min %}</li>{% endif %}
+        </ul>
+      {% endif %}
+
+
+      <!-- instructions -->
+      <div itemprop="recipeInstructions">
+        <h3>Instructions</h3>
+        {%- for instruction in page.instructions -%}
+        {% if instruction.title %}<h4>{{ instruction.title }}</h4>{% endif %}
+        <ol>
+          <li>{{ instruction.steps | join: '</li><li>' }}</li>
+        </ol>
+        {%- endfor %}
+      </div>
+
+      <!-- faq -->
+      <div>
+        <h2>FAQ</h2>
+        {%- for item in page.faq -%}
+        <details>
+          <summary>{{ item.question }}</summary>
+          {{ item.answer }}
+        </details>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</article>
