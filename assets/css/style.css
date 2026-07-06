@@ -23,10 +23,6 @@ html {
   background: var(--color-bg-default);
 }
 
-summary {
-  cursor: pointer;
-}
-
 a {
   color: inherit;
 }
@@ -36,11 +32,21 @@ h1 {
   font-weight: 600;
 }
 
+summary {
+  cursor: pointer;
+}
+
+/* GENERAL LAYOUT */
+
 .site-header {
   padding: 2rem;
+}
+
+.site-branding {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+
 
   h1 a {
     text-decoration: none;
@@ -50,6 +56,11 @@ h1 {
 .site-title {
   font-size: 0.8rem;
   line-height: 1;
+}
+
+
+#breadcrumbs {
+ margin-block: var(--space-m); 
 }
 
 .site-footer {

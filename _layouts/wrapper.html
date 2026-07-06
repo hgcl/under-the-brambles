@@ -19,13 +19,16 @@
     <link rel="shortcut icon" href="/favicon.ico?v=v1" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=v1" />
     <link rel="manifest" href="/site.webmanifest?v=v1" />
-  <body>
+<body>
     <header class="site-header">
-      <a href="/" tabindex="-1" aria-hidden><img class="logo" src="/assets/images/logo.png" /></a>
-      <div>
-        <h1><a href="/">{{ site.title }}</a></h1>
-        <p>{{ site.description }}</p>
+      <div class="site-branding">
+        <a href="/" tabindex="-1" aria-hidden><img class="logo" src="/assets/images/logo.png" /></a>
+        <div>
+          <h1><a href="/">{{ site.title }}</a></h1>
+          <p>{{ site.description }}</p>
+        </div>
       </div>
+      {% include breadcrumbs.html %}
     </header>
 
     <main>
