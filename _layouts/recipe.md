@@ -48,4 +48,15 @@ page_type: /assets/css/recipe-page.css
     {%- endfor %}
   </div>
 
+  <!-- faq -->
+  <div>
+    <h3>FAQ</h3>
+    {%- for item in page.faq -%}
+    <details>
+      <summary>{{ item.question }}</summary>
+      {{ item.answer }}
+    </details>
+    {%- endfor %}
+  </div>
+
 </div>
