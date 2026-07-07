@@ -159,6 +159,6 @@ summary {
     font-size: 18px;
   }
   body {
-    margin: var(--space-m);
+    margin: var(--space-l);
   }
 }
