@@ -8,9 +8,9 @@
   --color-border: hsla(70, 15%, 31%, 0.5);
 
   /* SPACES */
-  --space-m: 18px;
-  --space-l: 36px;
-  --space-xl: 54px;
+  --space-m: 16px;
+  --space-l: calc(var(--space-m)*2);
+  --space-xl: calc(var(--space-m)*3);
 
   /* FONTS */
   --font-body: "Noticia Text", serif;
@@ -27,40 +27,15 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--font-body);
   font-weight: normal;
   color: var(--color-fg-default);
   background: var(--color-bg-default);
 }
 
-a {
-  color: inherit;
-}
-a[href]:not(:where(
-  /* exclude hash only links */
-  [href^="#"],
-  /* exclude javascript only links */
-  [href^="javascript:" i],  
-  /* exclude relative but not double slash only links */
-  [href^="/"]:not([href^="//"])
-)):after {
-  content: ' ↗';
-}
-
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
-  font-weight: 600;
-}
-
-summary {
-  cursor: pointer;
-}
-
-/* GENERAL LAYOUT */
-
 body {
-  margin: var(--space-l);
+  margin: var(--space-m);
 }
 
 .site-branding {
@@ -99,6 +74,56 @@ body {
   margin-top: var(--space-xl);
 }
 
+/* ELEMENTS */
+
+a {
+  color: inherit;
+}
+a[href]:not(:where(
+  /* exclude hash only links */
+  [href^="#"],
+  /* exclude javascript only links */
+  [href^="javascript:" i],  
+  /* exclude relative but not double slash only links */
+  [href^="/"]:not([href^="//"])
+)):after {
+  content: ' ↗';
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2rem;
+}
+.h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+.h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+.h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+}
+.h4 {
+  font-size: 1rem;
+}
+
+summary {
+  cursor: pointer;
+}
+
 /* UTILS */
 
 .visually-hidden {
@@ -113,7 +138,27 @@ body {
 }
 
 .typography {
-  p:not(:last-child) {
+  h1, h2, p:not(:last-child) {
     margin-bottom: 1rem;
+  }
+  .h1, .h2 {
+    margin-bottom: 1rem;
+  }
+  .h3, .h4 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 640px) {
+  :root {
+    --space-m: 18px;
+  }
+  html {
+    font-size: 18px;
+  }
+  body {
+    margin: var(--space-m);
   }
 }
