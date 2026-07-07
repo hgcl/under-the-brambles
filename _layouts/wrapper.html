@@ -19,6 +19,11 @@
     <link rel="shortcut icon" href="/favicon.ico?v=v1" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=v1" />
     <link rel="manifest" href="/site.webmanifest?v=v1" />
+    <!-- custom head -->
+    {% if page.head %}
+      {{ page.head }}
+    {% endif %}
+  </head>
   <body>
     <header class="site-header">
       <div class="site-branding">
