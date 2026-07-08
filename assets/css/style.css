@@ -2,6 +2,7 @@
   /* COLORS */
   --color-fg-default: #2d3322;
   --color-fg-mute: hsl(70, 15%, 31%);
+  --color-bg-mute: white;
   --color-bg-default: #f1ffc0;
   --color-fg-strong: #f3eee7;
   --color-bg-strong: #3c4a3f;
