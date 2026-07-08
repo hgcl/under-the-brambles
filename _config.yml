@@ -4,6 +4,8 @@ baseurl: ""
 url: ""
 theme: null
 markdown: kramdown
-collections: {}
+collections:
+  preparations:
+    output: true
+    permalink: /preparations/:name/
 include: []
-permalink: /posts/:title/

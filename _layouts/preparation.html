@@ -1,6 +1,6 @@
 ---
 layout: wrapper
-page_type: /assets/css/recipe-page.css
+page_type: /assets/css/preparation-page.css
 ---
 
 <!-- 
@@ -11,23 +11,23 @@ page_type: /assets/css/recipe-page.css
 
 <article itemscope itemtype="https://schema.org/Recipe">
 
-  <header class="recipe-header">
-    <img itemprop="image" src="{{ page.image }}" class="recipe-header--image" alt=""/>
-  <div class="recipe-header--intro">
+  <header class="preparation-header">
+    <img itemprop="image" src="{{ page.image }}" class="preparation-header--image" alt=""/>
+  <div class="preparation-header--intro">
       <h1 itemprop="name">{{ page.title }}</h1>
-      <time class="recipe-header--date" datetime="{{ page.date }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <time class="preparation-header--date" datetime="{{ page.date }}">{{ page.date | date: "%B %-d, %Y" }}</time>
       <p itemprop="description">{{ page.excerpt }}</p>
-      <a href="#recipe">Go to recipe <span aria-hidden>↓</span></a>
+      <a href="#preparation">Go to the preparation<span aria-hidden> ↓</span></a>
     </div>
   </header>
   
-  <div class="recipe-content">
-    <div class="typography recipe-content--left">
-      <div class="recipe-content--background">
+  <div class="preparation-content">
+    <div class="typography preparation-content--left">
+      <div class="preparation-content--background">
         <h2>Background</h2>
         {{content}}
       </div>
-      <div class="recipe-content--sources">
+      <div class="preparation-content--sources">
         <h3 class="h4">Sources</h3>
         {%- for source in page.sources -%}
         <a href="{{ source.url }}">{{ source.name }}</a>
@@ -35,8 +35,8 @@ page_type: /assets/css/recipe-page.css
       </div>
     </div>
     
-    <div id="recipe" class="recipe-content--right">
-      <h2 class="visually-hidden">Recipe</h2>
+    <div id="preparation" class="preparation-content--right">
+      <h2 class="visually-hidden">Preparation</h2>
 
       <!-- ingredients -->
       <div>
@@ -74,7 +74,7 @@ page_type: /assets/css/recipe-page.css
       </div>
 
       <!-- faq -->
-      <div class="recipe-content--faq">
+      <div class="preparation-content--faq">
         <h2>FAQ</h2>
         {%- for item in page.faq -%}
         <details>

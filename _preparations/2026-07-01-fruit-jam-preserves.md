@@ -1,9 +1,9 @@
 ---
-layout: recipe
-title: Test
-date: 2026-07-03
+layout: preparation
+title: Fruit jam preserves
+date: 2026-07-01
 image: /assets/images/jam-jar.png
-months: [1, 2, 4, 5, 6, 7, 8, 10]
+months: [4, 5, 6, 7, 8, 9]
 prepTime: {min: 20}
 cookTime: {min: 15}
 totalTime: {hour: 10}
