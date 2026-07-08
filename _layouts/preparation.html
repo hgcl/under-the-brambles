@@ -13,11 +13,11 @@ page_type: /assets/css/preparation-page.css
 
   <header class="preparation-header">
     <img itemprop="image" src="{{ page.image }}" class="preparation-header--image" alt=""/>
-  <div class="preparation-header--intro">
+    <div class="preparation-header--intro">
       <h1 itemprop="name">{{ page.title }}</h1>
       <time class="preparation-header--date" datetime="{{ page.date }}">{{ page.date | date: "%B %-d, %Y" }}</time>
       <p itemprop="description">{{ page.excerpt }}</p>
-      <a href="#preparation">Go to the preparation<span aria-hidden> ↓</span></a>
+      <a href="#preparation">Jump to preparation<span aria-hidden> ↓</span></a>
     </div>
   </header>
   
@@ -39,7 +39,7 @@ page_type: /assets/css/preparation-page.css
       <h2 class="visually-hidden">Preparation</h2>
 
       <!-- ingredients -->
-      <div>
+      <div class="preparation-content--ingredients">
         <h3 class="h2">Ingredients</h3>
         <ul>
             {%- for ingredient in page.ingredients -%}
