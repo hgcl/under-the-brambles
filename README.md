@@ -4,13 +4,17 @@ A place for mossy paths, drying herbs, well-worn recipes, and timeless crafts.
 
 ## Development
 
+Set up:
+
+```
+bundle install
+```
+
+Build and run the website:
+
 ```
 bundle exec jekyll server
 ```
-
-## Logo
-
-The logo is created with Piskel: https://www.piskelapp.com/
 
 ## Images
 
