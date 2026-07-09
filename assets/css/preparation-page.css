@@ -39,14 +39,13 @@
   flex: 1 0 50%;
   align-self: flex-start;
   top: var(--space-l);
-  border: var(--border);
+  /* border: var(--border); */
 }
 .preparation-content--background {
   padding: var(--space-l) var(--space-m);
 }
 .preparation-content--sources {
   padding: var(--space-l) var(--space-m);
-  color: var(--color-fg-mute);
   border-top: var(--border);
 
   a {

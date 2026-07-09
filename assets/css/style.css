@@ -2,7 +2,7 @@
   /* COLORS */
   --color-fg-default: #2d3322;
   --color-fg-mute: hsl(70, 15%, 31%);
-  --color-bg-mute: white;
+  --color-bg-mute: hsl(78, 100%, 98%);
   --color-bg-default: #f1ffc0;
   --color-fg-strong: #f3eee7;
   --color-bg-strong: #3c4a3f;
@@ -152,6 +152,13 @@ button, summary {
   .h3, .h4 {
     margin-bottom: 0.5rem;
   }
+}
+
+/* Add CSS frame: https://charlottedann.com/article/fancy-frames-with-css */
+.frame-border {
+  border: var(--space-m) solid;
+  border-image-source: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="hsl(78, 100%, 98%)"><path d="M1 1H0v1h1v1h1V2h1V1H2V0H1v1Z"/></svg>');
+  border-image-slice: 1 fill;
 }
 
 /* MEDIA QUERIES */

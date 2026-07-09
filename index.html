@@ -26,10 +26,6 @@ head: |
         justify-content: space-around;
         text-align: center;
         text-decoration: none;
-        /* Add CSS frame: https://charlottedann.com/article/fancy-frames-with-css */
-        border: var(--space-m) solid;
-        border-image-source: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="white"><path d="M1 1H0v1h1v1h1V2h1V1H2V0H1v1Z"/></svg>');
-        border-image-slice: 1 fill;
       }
       img {
         object-fit: contain;
@@ -78,7 +74,7 @@ head: |
 
 <ul class="post-grid" role="list">
   {% for post in site.preparations %}
-    <li class="post-card" data-months="{{ post.months | join: ',' }}">
+    <li class="post-card frame-border" data-months="{{ post.months | join: ',' }}">
       <a href="{{ post.url }}"><img src="{{ post.image }}" alt="" width="100px" height="100px"/><span>{{ post.title }}</span></a>
     </li>
   {% endfor %}
