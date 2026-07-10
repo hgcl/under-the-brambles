@@ -1,6 +1,6 @@
 ---
 layout: preparation
-title: Preserved lemon
+title: Preserved lemon with salt
 date: 2026-07-08
 image: /assets/images/lemon.png
 months: [1, 2, 3, 4, 5, 5, 7, 8, 9, 10, 11, 12]
