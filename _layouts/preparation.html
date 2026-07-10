@@ -55,11 +55,11 @@ page_type: /assets/css/preparation-page.css
       {% if page.prepTime or page.cookTime or page.yield or page.moreInfo %}
       <div>
         <h3 class="visually-hidden">Other info</h3>
-        <ul class="preparation-content--more-info" role="list">
-          {% if page.prepTime %}<li><span>Preparation</span>{% include duration.html itemProp="prepTime" hour=page.prepTime.hour min=page.prepTime.min %}</li>{% endif %}
-          {% if page.cookTime %}<li><span>Cooking</span>{% include duration.html itemProp="cookTime"  hour=page.cookTime.hour min=page.cookTime.min %}</li>{% endif %}
-          {% if page.totalTime %}<li><span>Total time</span>{% include duration.html   hour=page.totalTime.hour min=page.totalTime.min %}</li>{% endif %}
-          {% if page.moreInfo %}{%- for info in page.moreInfo -%}<li><span class="capitalize-first-letter">{{ info[0] }}</span>{{ info[1] }}</li>{%- endfor -%}{% endif %}
+        <ul class="preparation-content--more-info border-top-bottom" role="list">
+          {% if page.prepTime %}<li><span class="label">Preparation</span>{% include duration.html itemProp="prepTime" hour=page.prepTime.hour min=page.prepTime.min %}</li>{% endif %}
+          {% if page.cookTime %}<li><span class="label">Cooking</span>{% include duration.html itemProp="cookTime"  hour=page.cookTime.hour min=page.cookTime.min %}</li>{% endif %}
+          {% if page.totalTime %}<li><span class="label">Total time</span>{% include duration.html   hour=page.totalTime.hour min=page.totalTime.min %}</li>{% endif %}
+          {% if page.moreInfo %}{%- for info in page.moreInfo -%}<li><span class="label capitalize-first-letter">{{ info[0] }}</span>{{ info[1] }}</li>{%- endfor -%}{% endif %}
         </ul>
       </div>
       {% endif %}
@@ -75,6 +75,18 @@ page_type: /assets/css/preparation-page.css
         </ol>
         {%- endfor %}
       </div>
+
+      <!-- uses -->
+      {% if page.uses %}
+      <div>
+        <h2>Uses</h2>
+        <ul>
+          {%- for item in page.uses -%}
+          <li>{{ item }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {% endif %}
 
       <!-- faq -->
       <div class="preparation-content--faq">

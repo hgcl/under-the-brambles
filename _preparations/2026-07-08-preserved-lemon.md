@@ -19,6 +19,10 @@ instructions:
       - Enough juice should come out to cover the lemons. If not, use another smaller jar to press down the lemons before closing the main jar.
       - Keep aside in a dark cool room for at least a month before using.
       - When using new lemons, add the extra lemon skins to that main jar, instead of throwing them away. Make sure to add an extra teaspoon of salt per lemon, and that everything remains submerged.
+uses:
+  - In savory dishes such as tajines or risottos
+  - Diced and added to a salad dressing
+  - Blended in a pesto
 faq:
   - question: Why are these lemons safe to eat?
     answer: These lemons go through the lactic acid fermentation process. The acid produced by the Lactobacillus bacteria makes this preparation very safe to eat.
