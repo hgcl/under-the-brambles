@@ -20,7 +20,7 @@ instructions:
       - Keep aside in a dark cool room for at least a month before using.
       - When using new lemons, add the extra lemon skins to that main jar, instead of throwing them away. Make sure to add an extra teaspoon of salt per lemon, and that everything remains submerged.
 uses:
-  - In savory dishes such as tajines or risottos
+  - In savory dishes such as tagines or risottos
   - Diced and added to a salad dressing
   - Blended in a pesto
 faq:
