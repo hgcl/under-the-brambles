@@ -39,21 +39,24 @@ head: |
       gap: 0.5rem;
     }
     .month-filter-button {
-        --border-width: 2px;
-      --side-padding: 1em;
-      border-top: var(--border-width) solid transparent;
-      border-left: 0px;
-      border-right: 0px;
-      border-bottom: var(--border-width) solid var(--color-border);
-      padding: 0.4em var(--side-padding) 0.4em var(--side-padding);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2em;
+      height: 2em;
+      line-height: 1;
+      border-radius: 100%;
+      border: 2px solid transparent;
       background: none;
+      padding: 1em;
+
+      font-size: var(--font-small);
+      color: var(--color-fg-mute);
 
       &.active {
-        border: var(--border-width) solid var(--color-bg-strong);
-        background: var(--color-bg-strong);
-        padding-left: calc(var(--side-padding) - var(--border-width));
-        padding-right: calc(var(--side-padding) - var(--border-width));
-        color: var(--color-fg-strong);
+        border-color: var(--color-fg-default);
+        color: var(--color-fg-default);
+        font-weight: bold;
       }
     }
   </style>
@@ -62,10 +65,10 @@ head: |
 <div class="tag-filters">
   <h2 class="h3">Filter preparations by month</h2>
   <div>
-    {% assign months = "1,2,3,4,5,6,7,8,9,10,11,12" | split: "," %}
+    {% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
     {% for month in months %}
-    <button class="month-filter-button" data-tag="{{ month }}" aria-pressed="false">
-      {{ month }}
+    <button class="month-filter-button" data-tag="{{ forloop.index }}" aria-pressed="false" aria-label="{{ month }}">
+      {{ month | truncate: 1, "" }}
     </button>
     {% endfor %}
   </div>
@@ -92,7 +95,7 @@ head: |
 
   buttons.forEach(button => {
     // Mark current month button as active
-    if (button.textContent.trim() === currentMonth) {
+    if (button.dataset.tag === currentMonth) {
       button.classList.add("active");
       button.ariaPressed = "true";
     }
