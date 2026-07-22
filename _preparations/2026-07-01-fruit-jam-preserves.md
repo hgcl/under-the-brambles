@@ -12,7 +12,7 @@ excerpt: "Jam is a pantry staple in homes around the world. But where does it co
 ingredients:
   - { name: fruit, value: 5, unit: kg }
   - { name: sugar, value: 2.5, unit: kg }
-  - { name: lemon, value: 1, prep: juiced, optional: true }
+  - { name: lemon, value: 1, note: juiced, optional: true }
 instructions:
   - title: Prep your fruits
     steps:

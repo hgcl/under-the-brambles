@@ -12,9 +12,9 @@ excerpt: "From a New World curiosity to a Mediterranean staple, the tomato has h
 ingredients:
   - { name: tomatoes, value: 10, unit: kg }
   - { name: salt }
-  - { name: carrots, prep: diced, optional: true }
-  - { name: onions, prep: diced, optional: true }
-  - { name: garlic, prep: cut small, optional: true }
+  - { name: carrots, note: diced, optional: true }
+  - { name: onions, note: diced, optional: true }
+  - { name: garlic, note: cut small, optional: true }
   - { name: "dry herbs (laurel, rosmarin, etc.)", optional: true }
   - { name: citric acid, optional: true }
 instructions:

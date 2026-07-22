@@ -10,12 +10,12 @@ yield: { value: 1, unit: jar }
 excerpt: "TODO"
 ingredients:
   - { name: "fresh basil leaves", value: 1, unit: bunch }
-  - { name: "pine nuts", prep: "to taste" }
+  - { name: "pine nuts", note: "to taste" }
   - {
       name: salt,
       value: 2.5,
       unit: "%",
-      prep: "based on weight of all ingredients",
+      note: "based on weight of all ingredients",
     }
 instructions:
   - title: Prepare the pesto

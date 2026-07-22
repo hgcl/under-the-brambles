@@ -46,7 +46,7 @@ page_type: /assets/css/preparation-page.css
         {% if page.yield %}<span class="preparation-content--yield">For <span itemprop="recipeYield">{{ page.yield.value }} {{ page.yield.unit }}</span>:</span>{% endif %}
         <ul>
             {%- for ingredient in page.ingredients -%}
-            <li itemprop="recipeIngredient" itemscope itemtype="https://schema.org/PropertyValue" class="capitalize-first-letter"><span itemprop="value">{{ ingredient["value"] }}</span>{% if ingredient["unit"] %} {{ ingredient["unit"] }}{% endif %} <span itemprop="name">{{ ingredient["name"] }}</span>{% if ingredient["optional"] %} (optional){% endif %}</li>
+            <li itemprop="recipeIngredient" itemscope itemtype="https://schema.org/PropertyValue" class="capitalize-first-letter"><span itemprop="value">{{ ingredient["value"] }}</span>{% if ingredient["unit"] %} {{ ingredient["unit"] }}{% endif %} <span itemprop="name">{{ ingredient["name"] }}</span>{% if ingredient["note"] %}, {{ ingredient["note"]}}{% endif %} {% if ingredient["optional"] %} (optional){% endif %}</li>
             {%- endfor -%}
         </ul>
       </div>
