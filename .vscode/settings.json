@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["tagines"]
+  "cSpell.words": [
+    "tagines"
+  ],
+  "files.exclude": {
+    "_site": true,
+    ".bundle": true,
+    ".jekyll-cache": true
+  }
 }
